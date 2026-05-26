@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="个人动态简历" />
+    <title>个人动态简历</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="site-header">
+        <a class="site-logo" href="#" aria-label="首页" id="logo-link">
+          <svg class="logo-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2" />
+            <path d="M10 42c2-10 8-14 14-14s12 4 14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </a>
+        <nav class="nav-tabs" id="nav-tabs" aria-label="内容导航"></nav>
+      </header>
+
+      <main class="content-area" aria-live="polite">
+        <section id="section-about" class="content-section active"></section>
+        <section id="section-education" class="content-section"></section>
+        <section id="section-skills" class="content-section"></section>
+        <section id="section-projects" class="content-section"></section>
+        <section id="section-experience" class="content-section"></section>
+      </main>
+    </div>
+
+    <div class="wechat-backdrop" id="wechat-backdrop"></div>
+    <div class="wechat-modal" id="wechat-modal" role="dialog" aria-modal="true" aria-labelledby="wechat-modal-title">
+      <div class="wechat-modal-inner">
+        <h2 id="wechat-modal-title" class="wechat-modal-title">微信扫码添加好友</h2>
+        <p class="wechat-modal-hint">扫一扫，添加我为朋友</p>
+        <img id="wechat-qr-img" class="wechat-qr-img" src="" alt="微信二维码" />
+        <button type="button" class="btn btn-dark" id="wechat-close">关闭</button>
+      </div>
+    </div>
+
+    <div class="matcher-backdrop" id="matcher-backdrop"></div>
+    <div class="matcher-modal" id="matcher-modal" role="dialog" aria-modal="true" aria-labelledby="result-title">
+      <div class="matcher-modal-inner">
+        <header class="matcher-modal-header">
+          <h2 id="result-title">综合等级 <span class="result-grade" id="result-grade">-</span></h2>
+          <span class="result-badge" id="result-label">匹配</span>
+        </header>
+
+        <section class="match-matrix">
+          <h3 class="match-matrix-title">匹配矩阵</h3>
+          <div class="match-matrix-body">
+            <div class="match-score-circle">
+              <span class="match-score-label">综合分</span>
+              <span class="match-score-value" id="result-score">0/100</span>
+            </div>
+            <div class="match-bars" id="result-bars"></div>
+          </div>
+        </section>
+
+        <div class="match-columns">
+          <section class="match-highlights-box">
+            <h3>匹配亮点</h3>
+            <ul id="result-highlights"></ul>
+          </section>
+          <section class="match-summary-box">
+            <h3>总结</h3>
+            <p id="result-summary"></p>
+          </section>
+        </div>
+
+        <footer class="matcher-modal-footer">
+          <button type="button" class="btn btn-dark" id="matcher-close">关闭</button>
+        </footer>
+      </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>
